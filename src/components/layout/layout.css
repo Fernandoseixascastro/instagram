@@ -1,0 +1,27 @@
+.main-grid {
+    display:grid;
+    
+    grid-template-areas: "firstColumn secondColumn";
+    grid-template-columns: 614px 293px ;
+
+
+    max-width: 957px;
+    margin: 30px auto;
+    
+ 
+}
+
+.box {
+    background: var(--background);
+    border: 1px solid var(--border);
+
+}
+
+.fy{
+    background: blue;
+}
+
+span{
+    font-size: 13px;
+    cursor: pointer;
+}
