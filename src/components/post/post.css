@@ -78,3 +78,19 @@
 .comment{
     border-top: 1px solid var(--border-secondary);
 }
+
+button{
+    background: rgb(47, 60, 247);
+    color: white;
+    width: 70px;
+    padding: 5px;
+    border-radius: 5%   ;
+    justify-content: space-between;
+}
+
+.comentario{
+    background: rgb(240, 234, 234);
+    width: 510px;
+    height: 27px ;
+    padding: 5px;
+}

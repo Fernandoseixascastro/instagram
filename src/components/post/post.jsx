@@ -73,7 +73,7 @@ export function Post() {
                             </div>
                         </IconContext.Provider> 
 
-                        <input placeholder='adicione um comentário...' />
+                        <input className='comentario' placeholder='adicione um comentário...' />
                         <button> Publicar </button>
                     </div>
                 </div>
