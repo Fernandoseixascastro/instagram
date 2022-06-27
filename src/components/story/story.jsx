@@ -9,7 +9,7 @@ export function Story() {
 
                  <div className='border-img'>
 
-                    <img className='img-story' src="https://pps.whatsapp.net/v/t61.24694-24/247399656_753766799121341_8843168939025380055_n.jpg?ccb=11-4&oh=01_AVxOLm2Jz58XFj69hkhnaXfbjr22T35GEgGF3v50fF0uzQ&oe=62B3304E" />
+                    <img className='img-story' src="https://netshare.com.br/wp-content/uploads/2018/01/quem-inventou-o-facebook-1.jpg" />
                     {/* tentar usar prop para evitar repeticões */}
 
                  </div>
@@ -26,7 +26,7 @@ export function Story() {
 
                 <div className='border-img'>
 
-                    <img className='img-story' src="https://pps.whatsapp.net/v/t61.24694-24/247399656_753766799121341_8843168939025380055_n.jpg?ccb=11-4&oh=01_AVxOLm2Jz58XFj69hkhnaXfbjr22T35GEgGF3v50fF0uzQ&oe=62B3304E" />
+                    <img className='img-story' src="https://netshare.com.br/wp-content/uploads/2018/01/quem-inventou-o-facebook-1.jpg" />
    {/* tentar usar prop para evitar repeticões */}
 
                 </div>
