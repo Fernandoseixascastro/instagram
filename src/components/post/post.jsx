@@ -1,7 +1,7 @@
 import './post.css'
 import { FiMoreHorizontal } from 'react-icons/fi'
-import { FiHeart , FiSend} from 'react-icons/fi'
-import { BsChat , BsBookmark, BsEmojiSmile } from 'react-icons/bs'
+import { FiHeart, FiSend } from 'react-icons/fi'
+import { BsChat, BsBookmark, BsEmojiSmile } from 'react-icons/bs'
 import { IconContext } from 'react-icons/lib'
 
 
@@ -31,19 +31,17 @@ export function Post() {
             </div>
 
             <div className='footer-post'>
-                <IconContext.Provider value={{size:'26px'}}>  
                 {/* PERGUNTAR PARA O PROFESSOR PORQUE O IMPORT DO PROVIDER NÃO ESTÁ FUNCIONANDO NO APP.JSX COM OS ICONES DO POST */}
-                    <section className='engagement-post'>
-                        <div className='icons-1'>
+                <section className='engagement-post'>
+                    <div className='icons-1'>
 
-                            <div className='icon'> < BsChat /> </div>
-                            <div className='icon'> < FiSend /></div>
-                            <div className='icon'> < FiHeart /> </div>
+                        <div className='icon'> < BsChat /> </div>
+                        <div className='icon'> < FiSend /></div>
+                        <div className='icon'> < FiHeart /> </div>
 
-                        </div>
-                        <div className='icon'> < BsBookmark /> </div>
-                    </section>
-                </IconContext.Provider>
+                    </div>
+                    <div className='icon'> < BsBookmark /> </div>
+                </section>
 
                 <section className='like'>
                     <span>
@@ -64,20 +62,16 @@ export function Post() {
                         HÁ 1 HORA
                     </time>
                 </div>
-                
-                <div className='comment'>
-                    <div className=''>
-                        <IconContext.Provider value={{size:'25px'}}>
-                            <div className='icon'>
-                                <BsEmojiSmile/>
-                            </div>
-                        </IconContext.Provider> 
 
-                        <input className='comentario' placeholder='adicione um comentário...' />
-                        <button> Publicar </button>
-                    </div>
+                <div className='comment'>
+                    <div className='icon'>
+                        <BsEmojiSmile />
+                    </div>    
+                    <input className='comentario' placeholder='adicione um comentário...' />
+                    <button> Publicar </button>
+                    
                 </div>
-            
+
 
             </div>
 

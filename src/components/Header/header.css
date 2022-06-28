@@ -1,12 +1,14 @@
 .Header {
     background-color: var(--background);
     border-bottom: 1px solid var(--border);
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     height: 8vh;
+    position: fixed;
+    top: 0;
+    width:100%;
 }
 
  .icons {
@@ -14,7 +16,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    width: 180px;
+    width: 250px;
     cursor: pointer;
     
 }
