@@ -6,10 +6,17 @@ export function Suggestion() {
     const [suggestions, setSuggestions] = useState([])
 
     const [limitUsers, setLimitUsers ] = useState(5)
+    const [followers, setFollow] = useState('Seguindo')
 
+    
     const limit = suggestions.slice(0, limitUsers)
-    useEffect (() => {
+    const [dados, setDados] = useState([]) //criar uma funcao que vai receber os dados da api para que eu possa colocar para seguir ou não;
 
+    // ou criar um um usestate no json(a parte que ele vai receber o json do link "https://api.github.com/users/gabrieldiasss/followers") que vai receber os dados e caso os que estiverem realmente seguindo ele vai retornar true or false;
+
+    
+    useEffect (() => {
+        
         fetch(`https://api.github.com/users/gabrieldiasss/followers`)
         .then((response) =>{
             return response.json()
@@ -21,6 +28,29 @@ export function Suggestion() {
             throw new Error(err)
         })
     }, [])
+    
+    const followSuggestion = () => {
+
+        if(followers == 'Seguindo'){
+        setFollow('Seguir')
+    }
+        else{
+            setFollow('Seguindo')
+        }
+    }
+// console.log(suggestions)
+    
+
+
+{limit.map((suggestion, key) => (
+    <div className='info-suggestion' key={key}>
+        <img className='suggestion-img' src={`https://github.com/${suggestion.login}.png`} />
+        <div>
+            <span> {suggestion.login} </span>
+            <p>Seguido por fernandoseixasc_</p>
+        </div>
+        <button className='Follow'>Seguir</button>
+</div>))}
 
 
     return (
@@ -44,12 +74,7 @@ export function Suggestion() {
 
             <div className='header-main-suggestion'>
                 <p>Sugestão para você</p>
-                <span>Ver tudo</span>
-            </div>
-
-            <div className='user-suggestion'>
-
-                {limit.map((suggestion, key) => (
+                <span>Ver tudo</span>                {limit.map((suggestion, key) => (
                     <div className='info-suggestion' key={key}>
                         <img className='suggestion-img' src={`https://github.com/${suggestion.login}.png`} />
                         <div>
@@ -58,6 +83,11 @@ export function Suggestion() {
                         </div>
                         <button className='Follow'>Seguir</button>
                 </div>))}
+
+            </div>
+
+            <div className='user-suggestion'>
+
 
 
             </div>

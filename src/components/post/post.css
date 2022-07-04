@@ -50,15 +50,7 @@
     cursor: pointer;
 }
  
-.like{
-    margin-top: 6px;
-}
 
-.like span{
-    font-size: 15px;
-    font-weight: 500;
-
-}
 
 .legend{
     font-size: 15px;
@@ -98,4 +90,6 @@
     margin-left: 5px;
     
 }
-
+.pi-heart:hover, .pi-heart-fill:hover, .pi-bookmark-fill, .pi-bookmark{
+    cursor: pointer;
+}
