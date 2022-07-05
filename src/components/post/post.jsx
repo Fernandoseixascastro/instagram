@@ -1,3 +1,5 @@
+
+
 import './post.css'
 import { FiMoreHorizontal } from 'react-icons/fi'
 import { FiHeart, FiSend } from 'react-icons/fi'
@@ -10,6 +12,11 @@ import { useForm } from "react-hook-form";
 
 export function Post() {
     
+
+    const validator = (string) => { // aceita letras dígitos e espaço em branco
+        const resultado = /[\w\d\s]{1,100}/.test(string) // retorna true se tiver nas condições ou false se não bater
+        return resultado
+    }
     const [showHeart, setShowHeart] = useState(false)
     const [showBook, setShowBook] = useState(false)
     // const [comentario, setComentario] = useState("")
@@ -116,7 +123,8 @@ export function Post() {
                         <BsEmojiSmile />
                     </div>    
                     <input  id='string'className='comentario' placeholder='adicione um comentário...' />
-                    <button id='enviar'> Publicar </button>
+                    <button type="submit" id='enviar' form="form1" value="Submit">Submit</button>
+
                     {/* <p id='paragrafo' >  </p> */}
                         
                 </div>
@@ -195,7 +203,8 @@ export function Post() {
                     <div className='icon'>
                         <BsEmojiSmile />
                     </div>    
-                    <input className='comentario' placeholder='adicione um comentário...' />
+
+                    <input   className='comentario' placeholder='adicione um comentário...' />
                     <button> Publicar </button>
                     
                 </div>
